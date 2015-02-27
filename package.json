@@ -1,0 +1,25 @@
+{
+  "name": "dm-cms",
+  "version": "0.0.0",
+  "description": "my try for a cms",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha -r landing"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/divramod/dm-cms.git"
+  },
+  "keywords": [
+    "cms",
+    "angular",
+    "nodejs",
+    "koajs"
+  ],
+  "author": "Arvid Petermann <arvidpetermann@gmail.com> (http://arvidpetermann.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/divramod/dm-cms/issues"
+  },
+  "homepage": "https://github.com/divramod/dm-cms"
+}
