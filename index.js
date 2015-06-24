@@ -12,17 +12,11 @@ job.start = co.wrap(function*() {
     // ARGS
     var arg = process.argv[2];
     if (arg === "clone") {
-        var message = "Hello Clone";
-        console.log(message.green);
-
+        require('./lib/grunt.js').run();
     } else if (arg === "install") {
         exec('sudo npm install . -g', {
             silent: false
         });
-
-    } else if (arg === "grunt") {
-        //require("Gruntfile.js");
-        require('./lib/grunt.js').run();
 
     } else if (arg === "publish") {
 
@@ -38,6 +32,9 @@ job.start = co.wrap(function*() {
         exec('npm publish ./', {
             silent: false
         });
+    } else {
+        console.log("The parameter " + arg + " is not supported!");
+
     }
 
     // RETURN

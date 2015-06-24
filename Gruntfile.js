@@ -1,5 +1,11 @@
+// =========== [ REQUIRE ] ===========
 var grunt = require("grunt");
 grunt.loadNpmTasks('grunt-bump');
+
+// =========== [ avoid loading Gruntfile.js ] ===========
+grunt.task.init = function() {};
+
+// =========== [ GRUNT CONFIG ] ===========
 grunt.initConfig({
     bump: {
         options: {
