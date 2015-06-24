@@ -1,6 +1,7 @@
 // =========== [ REQUIRE ] ===========
 var co = require("co");
 var colors = require("colors");
+var grunt = require("grunt");
 require("shelljs/global");
 
 // =========== [ MODULE DEFINE ] ===========
@@ -12,9 +13,24 @@ job.start = co.wrap(function*() {
     // ARGS
     var arg = process.argv[2];
     if (arg === "clone") {
-      var message = "Hello Clone";
-      console.log(message.green);
+        var message = "Hello Clone";
+        console.log(message.green);
 
+    } else if (arg === "publish") {
+
+
+        //exec('git add -A && git commit -m "publish" && git push -u origin HEAD ', {
+        //silent: false
+        //});
+        exec('grunt bump', {
+          silent: false
+        });
+        exec('sudo npm install . -g', {
+            silent: false
+        });
+        exec('npm publish ./', {
+            silent: false
+        });
     }
 
     // TODO restart docker container
