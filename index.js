@@ -18,6 +18,14 @@ job.start = co.wrap(function*() {
             silent: false
         });
 
+    } else if (arg === "bump") {
+        exec('git add -A && git commit -m "publish" && git push -u origin HEAD', {
+            silent: false
+        });
+        exec('npm version patch -m "Bumped to version %s"', {
+            silent: false
+        });
+
     } else if (arg === "publish") {
 
         exec('git add -A && git commit -m "publish" && git push -u origin HEAD', {
