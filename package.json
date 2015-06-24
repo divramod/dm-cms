@@ -21,5 +21,13 @@
   "bugs": {
     "url": "https://github.com/divramod/dm-cms/issues"
   },
-  "homepage": "https://github.com/divramod/dm-cms"
+  "homepage": "https://github.com/divramod/dm-cms",
+  "bin": {
+    "dminstall": "./bin/dm-install"
+  },
+  "dependencies": {
+    "co": "^4.5.4",
+    "colors": "^1.1.2",
+    "shelljs": "^0.5.1"
+  }
 }
