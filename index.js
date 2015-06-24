@@ -18,10 +18,9 @@ job.start = co.wrap(function*() {
 
     } else if (arg === "publish") {
 
-
-        //exec('git add -A && git commit -m "publish" && git push -u origin HEAD ', {
-        //silent: false
-        //});
+        exec('git add -A && git commit -m "publish" && git push -u origin HEAD', {
+          silent: false
+        });
         exec('grunt bump', {
           silent: false
         });
@@ -32,9 +31,6 @@ job.start = co.wrap(function*() {
             silent: false
         });
     }
-
-    // TODO restart docker container
-    // TODO checkout specific tag
 
     // RETURN
     return yield Promise.resolve(result);
