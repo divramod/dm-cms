@@ -1,6 +1,6 @@
 {
   "name": "dm-cms",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "description": "my try for a cms",
   "main": "index.js",
   "scripts": {
